@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 *, *::after, *::before {
     margin: 0px;
@@ -33,7 +33,7 @@ footer {
     height: 100px;
 }
 .container {
-    width: 1680px;
+    width: 1170px;
     margin: 0px auto;
 }
 /* HEADER */
@@ -45,6 +45,10 @@ header {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 999;
     transition: all .5s;
+}
+.header_container {
+    width: 1680px;
+    margin: 0px auto;
 }
 .flex {
     display: flex;
@@ -82,9 +86,23 @@ nav ul li {
     margin-right: 55px;
     font-size: 15px;
 }
-nav ul li a {
+.btn_header {
+    position: relative;
     color: #eee;
     text-decoration: none;
+}
+.btn_header::after {
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: #eee;
+    content: "";
+    transition: width 0.3s ease-out;
+}
+.btn_header:hover::after, .btn_header_active::after {
+    width: 100%;
 }
 .contacts {
     font-size: 15px;
@@ -102,9 +120,9 @@ nav ul li a {
 }
 /* MAIN */
 .popular_tours_title {
-    width: 610px;
+    width: 480px;
     color: #fff;
-    font-size: 48px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
     text-align: right;
@@ -116,75 +134,82 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px 120px;
 }
 .most_popular_tour, .popular_tour {
     position: relative;
     display: flex;
     flex-direction: column;
-    border-radius: 45px;
+    border-radius: 30px;
     border: 1px solid rgba(141, 125, 125, 0.37);
     background: rgba(26, 26, 26, 0.08);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .most_popular_tour {
     width: 100%;
-    margin-bottom: 90px;
+    margin-bottom: 30px;
 }
 .popular_tour {
-    width: 690px;
+    width: 535px;
     margin-bottom: 40px;
 }
 .tour_title {
     position: absolute;
     top: 0;
     left: 0;
-    width: 380px;
+    width: 240px;
     background: rgba(68, 68, 68, 0.45);
-    border-top-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     color: #FFF;
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    padding: 20px 0px;
+    padding: 15px 0px;
 }
 .most_popular_tour .tour_title {
-    width: 430px;
+    width: 360px;
     color: #FFF;
-    font-size: 40px;
+    font-size: 30px;
 }
 .tour_get_more {
     position: absolute;
-    top: 370px;
-    right: 50px;
+    top: 280px;
+    right: 40px;
     border-radius: 30px;
     border: 2px solid rgba(255, 19, 19, 0.50);
     background: #1F1F1F;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     color: #FFF;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    padding: 10px 58px;
+    padding: 10px 45px;
+    transition: all .3s;
+    cursor: pointer;
 }
 .most_popular_tour .tour_get_more {
-    top: 455px;
-    right: 80px;
-    font-size: 32px;
+    top: 380px;
+    right: 60px;
+    font-size: 24px;
+}
+.tour_get_more:hover, .tour_get_more:active {
+    border: 2px solid #1F1F1F;
+    background: #222;
+    color: rgba(255, 19, 19);
 }
 .tour_text {
     color: #000;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     padding: 20px;
 }
 .most_popular_tour .tour_text {
-    font-size: 32px;
+    font-size: 22px;
     padding: 20px;
 }
 .all_tours {
@@ -210,4 +235,82 @@ nav ul li a {
     font-weight: 400;
     padding: 20px 55px;
     border: none;
+    transition: all .3s;
+    cursor: pointer;
+}
+.btn_all_tours:hover, .btn_all_tours:active {
+    background: #222;
+    color: rgba(255, 19, 19);
+}
+/* TOURS */
+.tours_container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    padding: 15px 30px;
+    background: #eee;
+    border: 1px solid rgba(141, 125, 125, 0.37);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+.filters {
+    padding: 10px;
+    border-radius: 15px;
+    background: #fff;
+    border: 1px solid rgba(141, 125, 125, 0.37);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #fff;
+    color: #000;
+}
+.tours_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tour {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.tour_place {
+    position: absolute;
+    top: 25px;
+    width: 25%;
+    font-size: 18px;
+    color: #fff;
+    text-align: right;
+    background: #da251c;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 5px 15px;
+}
+.tour img {
+    width: 100%;
+}
+.tour_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.5);
+    height: 65px;
+    margin-top: -65px;
 }

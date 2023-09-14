@@ -9,4 +9,12 @@ $(document).ready(() => {
         }
         lastScrollPos = scrollPos;
     });
+    $(".filters").click(() => {
+        document.getElementById("dialog_filters").showModal();
+    });
+    $("#dialog_filters").click((event) => {
+        if (event.target.id !== "modal_content") {
+            document.getElementById("dialog_filters").close();
+        }
+    })
 });

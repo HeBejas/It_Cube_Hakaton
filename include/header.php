@@ -1,5 +1,5 @@
 <header>
-    <div class="container menu">
+    <div class="header_container menu">
         <div class="flex">
             <div class="flex">
                 <img src="" alt="Лого">
@@ -10,9 +10,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="">Главная</a></li>
-                    <li><a href="">Путешествия</a></li>
-                    <li><a href="">О Нас</a></li>
+                    <li><a id="home" class="btn_header" href="index.php">Главная</a></li>
+                    <li><a id="tours" class="btn_header" href="tours.php">Путешествия</a></li>
+                    <li><a if="about" class="btn_header" href="">О Нас</a></li>
                 </ul>
             </nav>
         </div>
