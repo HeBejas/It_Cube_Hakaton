@@ -84,7 +84,7 @@ nav ul li {
     flex-direction: column;
     justify-content: center;
     margin-right: 55px;
-    font-size: 15px;
+    font-size: 18px;
 }
 .btn_header {
     position: relative;
@@ -112,6 +112,10 @@ nav ul li {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+}
+.contacts a {
+    text-decoration: none;
+    color: #ccc;
 }
 .contacts img {
     height: 20px;
@@ -233,6 +237,7 @@ nav ul li {
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
+    text-decoration: none;
     padding: 20px 55px;
     border: none;
     transition: all .3s;
@@ -246,20 +251,32 @@ nav ul li {
 .tours_container {
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
     padding: 15px 30px;
     background: #eee;
     border: 1px solid rgba(141, 125, 125, 0.37);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
 }
 .filters {
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
     border-radius: 15px;
     background: #fff;
     border: 1px solid rgba(141, 125, 125, 0.37);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all .3s;
+    cursor: pointer;
+}
+.filters:hover, .filters:active {
+    background: #efefef;
+}
+.filters img {
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
 }
 .modal {
     position: fixed;
@@ -281,9 +298,12 @@ nav ul li {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 300px;
     width: 47%;
     margin-bottom: 20px;
     cursor: pointer;
+    border-radius: 25px;
+    overflow: hidden;
 }
 .tour_place {
     position: absolute;
@@ -301,10 +321,13 @@ nav ul li {
     width: 100%;
 }
 .tour_info {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 30px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     color: #fff;
@@ -312,5 +335,112 @@ nav ul li {
     font-weight: 500;
     background: rgba(0, 0, 0, 0.5);
     height: 65px;
-    margin-top: -65px;
+}
+.tour_info_name {
+    font-size: 22px;
+    font-weight: 600;
+}
+.tour_info_time {
+    font-size: 16px;
+    color: #ccc;
+}
+.filters_row {
+    display: flex;
+}
+.filters_col {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.filters_col_title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.filters_controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+}
+.filters_controls svg {
+    margin-right: 5px;
+}
+.filters_reset {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    background: #ff6565;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.filters_reset:hover {
+    color: #ff6565;
+    border: 1px solid #ff6565;
+    background: #fff;
+}
+#svg_filters_reset {
+    transition: fill .3s;
+}
+.filters_reset:hover #svg_filters_reset {
+    fill: #ff6565;
+}
+.filters_confirm {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    background: #87ff87;
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 5px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.filters_confirm:hover {
+    color: #87ff87;
+    border: 1px solid #87ff87;
+    background: #fff;
+}
+#svg_filters_confirm {
+    transition: fill .3s;
+}
+.filters_confirm:hover #svg_filters_confirm {
+    fill: #87ff87;
+}
+.filters_cancel {
+    border: none;
+    background: #fff;
+    font-size: 14px;
+    color: #444;
+    text-decoration: underline;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.input_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+}
+.input_wrapper label {
+    margin-left: 10px;
+}
+.input_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input_price input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    margin-left: 10px;
+    font-size: 16px;
 }

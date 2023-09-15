@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="all_tours">
-                        <button class="btn_all_tours">Все Туры</button>
+                        <a class="btn_all_tours" href="tours.php">Все Туры</a>
                     </div>
                 </div>
             </div>

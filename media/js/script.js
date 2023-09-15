@@ -13,8 +13,19 @@ $(document).ready(() => {
         document.getElementById("dialog_filters").showModal();
     });
     $("#dialog_filters").click((event) => {
-        if (event.target.id !== "modal_content") {
-            document.getElementById("dialog_filters").close();
-        }
+        if (event.target.id !== 'dialog_filters')
+            return;
+
+        const rect = event.target.getBoundingClientRect();
+
+        const clickedInDialog = (
+            rect.top <= event.clientY &&
+            event.clientY <= rect.top + rect.height &&
+            rect.left <= event.clientX &&
+            event.clientX <= rect.left + rect.width
+        );
+
+        if (clickedInDialog === false)
+            event.target.close();
     })
 });
