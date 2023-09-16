@@ -2,7 +2,7 @@
     <div class="header_container menu">
         <div class="flex">
             <div class="flex">
-                <img src="" alt="Лого">
+                <img src="media/images/logo.svg" alt="Лого">
                 <div class="logo_text">
                     <div>Турагенство</div>
                     <div>ИжГоу</div> 
@@ -12,7 +12,7 @@
                 <ul>
                     <li><a id="home" class="btn_header" href="index.php">Главная</a></li>
                     <li><a id="tours" class="btn_header" href="tours.php">Путешествия</a></li>
-                    <li><a if="about" class="btn_header" href="">О Нас</a></li>
+                    <li><a id="about" class="btn_header" href="about.php">О Нас</a></li>
                 </ul>
             </nav>
         </div>

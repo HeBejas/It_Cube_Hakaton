@@ -13,7 +13,7 @@ $(document).ready(() => {
         document.getElementById("dialog_filters").showModal();
     });
     $("#dialog_filters").click((event) => {
-        if (event.target.id !== 'dialog_filters')
+        if (event.target.id !== "dialog_filters")
             return;
 
         const rect = event.target.getBoundingClientRect();
@@ -27,5 +27,5 @@ $(document).ready(() => {
 
         if (clickedInDialog === false)
             event.target.close();
-    })
+    });
 });

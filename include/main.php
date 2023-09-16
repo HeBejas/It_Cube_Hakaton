@@ -1,34 +1,52 @@
 <main>
     <div class="hero">
-        а как ?
+        <div class="hero_title">
+            <div>«ИЖГОУ»</div>
+            <div>ЛУЧШИЕ ТУРЫ УДМУРТИИ</div>
+        </div>
     </div>
     <div class="popular_tours_title">Популярные туры</div>
     <div class="container">
         <div class="popular_tours">
             <div class="container">
                 <div class="popular_tours_list">
-                    <div class="most_popular_tour">
-                        <div class="tour_title">Зуевы Ключи</div>
-                        <div class="tour_get_more">Подробнее</div>
-                        <img src="media/images/zuevy-klyuchi.png" alt="Зуевы ключи">
-                        <div class="tour_text">
-                            Одно из красивейших мест Удмуртии находится в Каракулинском района. Его особенностью является пейзаж в виде просторов Камы
+                    <div class="tour most_popular_tour" style="background: url(media/images/udm1.webp); background-size: cover; background-repeat: no-repeat;">
+                        <div class="tour_place">Ижевск</div>
+                        <div class="tour_info">
+                            <div class="flex jc_space-between">
+                                <div class="tour_info_name">Зуевы Ключи</div>
+                                <div>
+                                    <div class="tour_info_time">12 часов</div>
+                                    <div class="tour_info_price">2900₽</div>
+                                </div>
+                            </div>
+                            <div class="tour_desc">Одно из красивейших мест Удмуртии находится в Каракулинском района. Его особенностью является пейзаж в виде просторов Камы.</div>
                         </div>
                     </div>
-                    <div class="popular_tour">
-                        <div class="tour_title">Зуевы Ключи</div>
-                        <div class="tour_get_more">Подробнее</div>
-                        <img src="media/images/natsionalnyy-park.png" alt="Зуевы ключи">
-                        <div class="tour_text">
-                            Одно из красивейших мест Удмуртии находится в Каракулинском района
+                    <div class="tour" style="background: url(media/images/natsionalnyy-park.png);">
+                        <div class="tour_place">Ижевск</div>
+                        <div class="tour_info">
+                            <div class="flex jc_space-between">
+                                <div class="tour_info_name">Зуевы Ключи</div>
+                                <div>
+                                    <div class="tour_info_time">12 часов</div>
+                                    <div class="tour_info_price">2900₽</div>
+                                </div>
+                            </div>
+                            <div class="tour_desc">Одно из красивейших мест Удмуртии находится в Каракулинском района. Его особенностью является пейзаж в виде просторов Камы.</div>
                         </div>
                     </div>
-                    <div class="popular_tour">
-                        <div class="tour_title">Зуевы Ключи</div>
-                        <div class="tour_get_more">Подробнее</div>
-                        <img src="media/images/natsionalnyy-park.png" alt="Зуевы ключи">
-                        <div class="tour_text">
-                            Одно из красивейших мест Удмуртии находится в Каракулинском района
+                    <div class="tour" style="background: url(media/images/natsionalnyy-park.png);">
+                        <div class="tour_place">Ижевск</div>
+                        <div class="tour_info">
+                            <div class="flex jc_space-between">
+                                <div class="tour_info_name">Зуевы Ключи</div>
+                                <div>
+                                    <div class="tour_info_time">12 часов</div>
+                                    <div class="tour_info_price">2900₽</div>
+                                </div>
+                            </div>
+                            <div class="tour_desc">Одно из красивейших мест Удмуртии находится в Каракулинском района. Его особенностью является пейзаж в виде просторов Камы.</div>
                         </div>
                     </div>
                     <div class="all_tours">
@@ -38,7 +56,6 @@
             </div>
         </div>
     </div>
-    
 </main>
 <script>
     document.getElementById("home").classList.add("btn_header_active");

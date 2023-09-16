@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="filters_col">
-                        <div class="filters_col_title">Продолжительность</div>
+                        <div class="filters_col_title">Длительность</div>
                         <div class="input_wrapper">
                             <label for="time_hour">1 час</label>
                             <input id="time_hour" type="checkbox" value="1h">
@@ -55,6 +55,29 @@
                         </div>
                         <div class="input_wrapper">
                             <label for="time_week">Неделя</label>
+                            <input id="time_week" type="checkbox" value="1w">
+                        </div>
+                    </div>
+                    <div class="filters_col">
+                        <div class="filters_col_title">Возрастной рейтинг</div>
+                        <div class="input_wrapper">
+                            <label for="time_hour">0+</label>
+                            <input id="time_hour" type="checkbox" value="1h">
+                        </div>
+                        <div class="input_wrapper">
+                            <label for="time_hour3">6+</label>
+                            <input id="time_hour3" type="checkbox" value="3h">
+                        </div>
+                        <div class="input_wrapper">
+                            <label for="time_day">14+</label>
+                            <input id="time_day" type="checkbox" value="1d">
+                        </div>
+                        <div class="input_wrapper">
+                            <label for="time_day3">16+</label>
+                            <input id="time_day3" type="checkbox" value="3d">
+                        </div>
+                        <div class="input_wrapper">
+                            <label for="time_week">18+</label>
                             <input id="time_week" type="checkbox" value="1w">
                         </div>
                     </div>
