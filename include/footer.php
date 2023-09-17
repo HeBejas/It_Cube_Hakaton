@@ -1,6 +1,6 @@
 <footer>
-    <div class="container flex jc_space-between">
-        <div>
+    <div class="container flex jc_space-between footer_container">
+        <div class="footer_container-info">
             Сайт разрабатывали:
             <ul>
                 <li>Савин Иван Михайлович</li>
