@@ -12,6 +12,10 @@
                         <div class="filters_col">
                             <div class="filters_col_title">Место</div>
                             <div class="input_wrapper">
+                                <label for="place_udm">Удмуртия</label>
+                                <input name="place[]" id="place_udm" type="checkbox" value="Удмуртия">
+                            </div>
+                            <div class="input_wrapper">
                                 <label for="place_izh">Ижевск</label>
                                 <input name="place[]" id="place_izh" type="checkbox" value="Ижевск">
                             </div>
@@ -38,29 +42,29 @@
                         </div>
                         <div class="filters_col">
                             <div class="filters_col_title">Длительность</div>
-                            <div class="input_wrapper">
-                                <label for="time_hour">1 час</label>
-                                <input id="time_hour" type="checkbox" value="1h">
-                            </div>
-                            <div class="input_wrapper">
-                                <label for="time_hour3">3 час</label>
-                                <input id="time_hour3" type="checkbox" value="3h">
-                            </div>
-                            <div class="input_wrapper">
-                                <label for="time_day">1 день</label>
-                                <input id="time_day" type="checkbox" value="1d">
-                            </div>
-                            <div class="input_wrapper">
-                                <label for="time_day3">3 дня</label>
-                                <input id="time_day3" type="checkbox" value="3d">
-                            </div>
-                            <div class="input_wrapper">
-                                <label for="time_week">Неделя</label>
-                                <input id="time_week" type="checkbox" value="1w">
-                            </div>
+                            <label for="time_low">От</label>
+                            <select name='time_low' id='time_low'>
+                                <option value='30' selected>30 минут</option>
+                                <option value='60'>1 час</option>
+                                <option value='120'>2 часа</option>
+                                <option value='240'>4 часа</option>
+                                <option value='720'>12 часов</option>
+                                <option value='1440'>1 день</option>
+                                <option value='4320'>3 дня</option>
+                            </select>
+                            <label for="time_high">До</label>
+                            <select name='time_high' id='time_high'>
+                                <option value='60'>1 час</option>
+                                <option value='120'>2 часа</option>
+                                <option value='240'>4 часа</option>
+                                <option value='720'>12 часов</option>
+                                <option value='1440'>1 день</option>
+                                <option value='4320'>3 дня</option>
+                                <option value='10080' selected>1 неделя</option>
+                            </select>
                         </div>
                         <div class="filters_col">
-                            <div class="filters_col_title">Возрастной рейтинг</div>
+                            <div class="filters_col_title">Возраст</div>
                             <div class="input_wrapper">
                                 <label for="time_hour">0+</label>
                                 <input name="age[]" id="time_hour" type="checkbox" value="0+">
@@ -86,11 +90,11 @@
                             <div class="filters_col_title">Цена</div>
                             <div class="input_price">
                                 <label for="price_low">От: </label>
-                                <input id="price_low" type="number" min="100" max="25000" value="100">
+                                <input id="price_low" type="number" min="100" max="25000" value="100" name="price_low">
                             </div>
                             <div class="input_price">
                                 <label for="price_high">До: </label>
-                                <input id="price_high" type="number" min="100" max="25000" value="25000">
+                                <input id="price_high" type="number" min="100" max="25000" value="25000" name="price_high">
                             </div>
                         </div>
                     </div>
@@ -125,7 +129,7 @@
 
     $(".filters_confirm").click(function() {
         var setdata = $("#filter_form").serialize();    
-        $.post('include/tours_list_edit.php', setdata, function(data) {
+        $.post('include/tours_list.php', setdata, function(data) {
             $('.tours_list').html(data);
         });
         event.preventDefault();
