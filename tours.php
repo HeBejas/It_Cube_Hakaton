@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="media/css/style.css">
     <link rel="stylesheet" href="media/css/mobile.css">
     <link rel="icon" href="media/images/udm.png">
-    
     <script src="media/js/jquery.js"></script>
     <script src="media/js/script.js"></script>
 </head>

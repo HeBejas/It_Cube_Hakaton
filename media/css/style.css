@@ -27,6 +27,7 @@ header, main, footer {
 main {
     position: relative;
     margin-top: 100px;
+    min-height: 100vh;
 }
 main::before {
     z-index: 1;
@@ -324,7 +325,7 @@ nav ul li {
 }
 .modal {
     position: fixed;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 50px;
@@ -332,6 +333,7 @@ nav ul li {
     border-radius: 10px;
     background: #fff;
     color: #000;
+    transition: all 1s;
 }
 .tours_list {
     display: flex;
@@ -560,4 +562,201 @@ nav ul li {
     border: 0; 
     z-index: 1; 
     border-radius: 25px;
+}
+/* TOUR_PAGE */
+.tour_page_info {
+    padding-top: 20px;
+    display: flex;
+}
+.tour_page_info img {
+    width: 50%;
+    height: 100%;   
+    margin-right: 20px;
+    border-radius: 25px;
+}
+.tour_page_text {
+    display: flex;
+    flex-direction: column;
+}
+.tour_page_title {
+    font-size: 32px;
+    font-weight: 700;
+}
+.tour_info_line, .touroperator_line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.tour_page_text_elem {
+    margin-block: 10px;
+}
+.tour_page_text_title {
+    font-size: 20px;
+    font-weight: 600;
+}
+.tour_page_text_value {
+    font-size: 16px;
+}
+.touroperator_title {
+    font-size: 24px;
+    font-weight: 600;
+}
+.touroperator_space {
+    margin-top: 30px;
+}
+.touroperator_photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.touroperator_photo img {
+    width: 100%;
+    height: 100%;
+}
+.touroperator_info {
+    width: 75%;
+}
+.tourop_name {
+    font-size: 24px;
+    font-weight: 600;
+}
+.tourop_info_block {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.tour_stops {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+.tour_stops_title {
+    font-size: 24px;
+    font-weight: 600;
+}
+.stop_block {
+    margin-top: 20px;
+}
+.stop_line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stop_img {
+    width: 40%;
+}
+.stop_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px
+}
+.stop_desc {
+    font-family: 'Montserrat', sans-serif;
+    width: 50%;
+}
+.stop_title {
+    font-family: 'Montserrat Alternates', sans-serif;
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+.stop_title::before {
+    color: #da251c;
+    font-size: 40px;
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+.signup_tour {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    outline: none;
+    background: #da251c;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 25px;
+    border: 1px solid #da251c;
+    padding: 10px;
+    transition: all .3s;
+    cursor: pointer;
+}
+.signup_tour:hover {
+    color: #da251c;
+    background: transparent;
+}
+#dialog_signup_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s;
+}
+#dialog_signup_close:hover {
+    color: #da251c;
+}
+.form_title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.form_tour_info {
+    font-size: 18px;
+    color: #444;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+.form_tour_info p {
+    margin-top: 10px;
+}
+.form_tour_info span {
+    color: #000;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.form_client_info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.form_input_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-block: 10px;
+}
+.form_input_wrapper input {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-bottom: 1px solid #444;
+}
+.form_input_wrapper input:active {
+    outline: none;
+}
+.form_signup {
+    margin-block: 20px;
+    outline: none;
+    border: 1px solid #da251c;
+    background: #da251c;
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    transition: all .3s;
+}
+.form_signup:hover {
+    color: #da251c;
+    background: transparent;
+}
+#form_load {
+    transition: all 1s;
 }

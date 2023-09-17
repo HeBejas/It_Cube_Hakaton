@@ -57,8 +57,9 @@
     include ("connect.php");
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
+    $link->close();
     if($result == false) {
-        die("Произошла ошибка при выполнении запроса"); 
+        die("Произошла ошибка при выполнении запроса " . $query); 
     }
     else {
         for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
@@ -92,19 +93,8 @@
 ?>
 
 <script>
-    // $(".tour").hover(function() {
-    //     $(this).find(".tour_desc").toggle("show");
-    // },
-    // /*unhover*/ function() {
-    //     $(this).find(".tour_desc").toggle("show");
-    // });
-    // $(".tour").hover(function() {
-    //     $(this).find(".tour_desc").fadeIn();
-    // },
-    // /*unhover*/ function() {
-    //     $(this).find(".tour_desc").fadeOut();
-    // });
     function transition(id) {
         $( "main" ).load( "include/tour_description.php", {id: id} );
+        window.scrollTo(0, 0);
     }
 </script>

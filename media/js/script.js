@@ -2,7 +2,7 @@ $(document).ready(() => {
     let lastScrollPos = 0;
     $(window).scroll(function() {
         var scrollPos = $(window).scrollTop();
-        if (scrollPos > lastScrollPos && scrollPos > 100) {
+        if (scrollPos > lastScrollPos && scrollPos >= 100) {
             $("header").css({"margin-top" : "-100px"});
         } else {
             $("header").css({"margin-top" : "0px"});
